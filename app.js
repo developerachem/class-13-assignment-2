@@ -72,6 +72,7 @@ start.addEventListener('click', function () {
         let progressBar = `${widthCal(time.value,(progressCount - 1))}`
         progress.style.width = `${progressBar}%`
 
+        // Progress Bar --
         if (progressBar <= 100 && progressBar > 50) {
             progress.style.backgroundColor = 'green'
             count.style.color = 'green';
@@ -80,18 +81,16 @@ start.addEventListener('click', function () {
             progress.style.backgroundColor = 'blue'
             count.style.color = 'blue';
 
-        }
-        if (progressBar <= 25 && progressBar > 15) {
+        } else if (progressBar <= 25 && progressBar > 15) {
             progress.style.backgroundColor = 'yellow'
             count.style.color = 'yellow';
 
-        }
-        if (progressBar <= 15) {
+        } else if (progressBar <= 15) {
             progress.style.backgroundColor = 'red'
             count.style.color = 'red';
 
         }
-
+        // Counter --
         if (progressCount == 0) {
             clearInterval(progressIntv);
             progressCount = time.value;
@@ -101,7 +100,7 @@ start.addEventListener('click', function () {
         } else {
             progressCount--;
             count.innerHTML = (progressCount < 10 ? '0' + progressCount : progressCount) + '%'
-            console.log(progressBar);
+
         }
 
     }, 1000)
@@ -567,7 +566,7 @@ resultShit.addEventListener('submit', function (e) {
                     <td>${gread(agr.value)}</td>
                 </tr>
             `
-            finelResult.innerHTML = cgpa(gpa(bn.value),gpa(en.value),gpa(math.value),gpa(s.value),gpa(ss.value),gpa(agr.value));
+            finelResult.innerHTML = cgpa(gpa(bn.value), gpa(en.value), gpa(math.value), gpa(s.value), gpa(ss.value), gpa(agr.value));
             name.value = "";
             fName.value = "";
             mName.value = "";

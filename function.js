@@ -1,3 +1,7 @@
+function widthCal(mainTime , currentTime){
+    return (currentTime * 100) / mainTime;
+}
+
 function gpa (marks) {
     
     let gpa;
