@@ -581,3 +581,25 @@ resultShit.addEventListener('submit', function (e) {
         }, 3000)
     }
 })
+
+
+const todoForm = document.querySelector('#todoForm');
+const todoResult = document.querySelector('#todo-result');
+
+todoForm.addEventListener('submit', function(e){
+    e.preventDefault()
+    let todoItem = this.querySelector('#todoItem');
+    let option = this.querySelector('#opt');
+    
+
+
+    if( todoItem.value === "" || option.value === "" ){
+        alert( ' All  Field Required  ' )
+    }else{
+        todoResult.innerHTML += `  <li style="border-bottom: 1px solid #ddd; padding: 10px;">${todoItem.value}       (${option.value})</li> `
+        todoItem.value = "";
+        option.value = option.children[0].value;
+         
+    }
+
+})
