@@ -14,6 +14,14 @@
 
 
     <style>
+        li{
+            list-style: none;
+            margin: 0;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+        }
         table,
         td,
         th {
@@ -280,6 +288,32 @@
                         
                     </table>
                     <div id="finelResult" class="mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr class="mt-5"> 
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">Todo App</h2>
+        <div class="todo-app d-flex justify-content-between">
+            <div class="input-fidd w-50">
+                <form id="todoForm" action="#" class="d-flex ">
+                    <input type="text" placeholder="Type Item" class="form-control w-50" id="todoItem">
+                    <select name="" id="opt" class="form-control mx-2 w-25">
+                        <option value="">- Select -</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Important">Important</option>
+                        <option value="No Need">No Need</option>
+                    </select>
+                    <input class="btn btn-success w-25" type="submit" value="Add" name="" id="">
+                </form>
+            </div>
+            <div class="todo-result "  style="width: 45%; margin-bottom: 100px;">
+                <div class=" bg-light p-2 rounded">
+                    Item......
+                    <ul class="ml-5"  id="todo-result">
+                       <!-- This LI Comme Form APP.Js -->
+                    </ul>
                 </div>
             </div>
         </div>
